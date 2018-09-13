@@ -80,6 +80,8 @@ copy-files:
 	install -m 755 qa/suites/basic/*.sh $(DESTDIR)/usr/lib/deepsea/qa/suites/basic/
 	install -m 755 qa/suites/ceph-test/*.sh $(DESTDIR)/usr/lib/deepsea/qa/suites/ceph-test/
 	# tests
+	install -d -m 755 $(DESTDIR)/srv/salt/ceph/tests/engulf
+	install -m 644 srv/salt/ceph/tests/engulf/*.sls $(DESTDIR)/srv/salt/ceph/tests/engulf
 	install -d -m 755 $(DESTDIR)/srv/salt/ceph/tests/keyrings
 	install -m 644 srv/salt/ceph/tests/keyrings/*.sls $(DESTDIR)/srv/salt/ceph/tests/keyrings
 	install -d -m 755 $(DESTDIR)/srv/salt/ceph/tests/openstack
@@ -139,6 +141,8 @@ copy-files:
 	install -m 644 srv/salt/ceph/functests/1node/*.sls $(DESTDIR)/srv/salt/ceph/functests/1node
 	install -d -m 755 $(DESTDIR)/srv/salt/ceph/functests/1node/apparmor
 	install -m 644 srv/salt/ceph/functests/1node/apparmor/*.sls $(DESTDIR)/srv/salt/ceph/functests/1node/apparmor
+	install -d -m 755 $(DESTDIR)/srv/salt/ceph/functests/1node/engulf
+	install -m 644 srv/salt/ceph/functests/1node/engulf/*.sls $(DESTDIR)/srv/salt/ceph/functests/1node/engulf
 	install -d -m 755 $(DESTDIR)/srv/salt/ceph/functests/1node/keyrings
 	install -m 644 srv/salt/ceph/functests/1node/keyrings/*.sls $(DESTDIR)/srv/salt/ceph/functests/1node/keyrings
 	install -d -m 755 $(DESTDIR)/srv/salt/ceph/functests/1node/macros
